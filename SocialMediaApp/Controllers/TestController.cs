@@ -1,23 +1,24 @@
 ﻿using Domain_Layer;
 using Domain_Layer.Exceptions;
 using Microsoft.AspNetCore.Mvc;
+using Service_Layer.ServiceAbstraction;
 
 namespace SocialMediaApp.Controllers
 {
     [Route("api/[controller]")]
     public class TestController : ControllerBase
     {
-        private readonly IUnitOfWork unitOfWork;
+        private readonly IServiceManager serviceManager;
 
-        public TestController(IUnitOfWork unitOfWork)
+        public TestController(IServiceManager serviceManager)
         {
-            this.unitOfWork = unitOfWork;
+            this.serviceManager = serviceManager;
         }
         [HttpGet]
         public async Task<ActionResult> test()
         {
-            var r = await unitOfWork.Users.GetByIdAsync(1);
-            return Ok(r);
+            
+            return Ok(serviceManager.UserService.getAllUsers());
         }
     }
 }

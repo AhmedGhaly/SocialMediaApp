@@ -1,9 +1,14 @@
 
 using Domain_Layer;
+using Domain_Layer.AutoMapper.Profiles;
 using Domain_Layer.Exceptions;
 using Infrastructure_Layer;
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Service_Layer.ServiceAbstraction;
+using Service_Layer.Service;
 
 namespace SocialMediaApp
 {
@@ -19,12 +24,14 @@ namespace SocialMediaApp
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAutoMapper(new[] { typeof(UserProfile).Assembly });
 
             builder.Services.AddDbContext<SocialMediaContext>(options =>
             options.UseSqlServer(
                      builder.Configuration.GetConnectionString("DB")));
 
-            builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddTransient<IUnitOfWork, UnitOfWork>(); 
+            builder.Services.AddTransient<IServiceManager, ServiceManager>();
             builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
             builder.Services.AddProblemDetails();
 

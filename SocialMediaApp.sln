@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaApp", "SocialMediaApp\SocialMediaApp.csproj", "{039363A3-F60E-4E4E-9269-DD0311BE8D8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMediaApp", "SocialMediaApp\SocialMediaApp.csproj", "{039363A3-F60E-4E4E-9269-DD0311BE8D8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain Layer", "Domain Layer\Domain Layer.csproj", "{9C17D575-D5BC-4569-94C6-45F08DE00099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain Layer", "Domain Layer\Domain Layer.csproj", "{9C17D575-D5BC-4569-94C6-45F08DE00099}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service Layer", "Service Layer\Service Layer.csproj", "{A8D33861-B199-49C7-BE55-2020E8A150C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service Layer", "Service Layer\Service Layer.csproj", "{A8D33861-B199-49C7-BE55-2020E8A150C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure Layer", "Infrastructure Layer\Infrastructure Layer.csproj", "{76875F98-2B5A-42E7-86B0-E858579F7BC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure Layer", "Infrastructure Layer\Infrastructure Layer.csproj", "{76875F98-2B5A-42E7-86B0-E858579F7BC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{2D138E20-5858-4571-86F4-8ED5226427F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{2D138E20-5858-4571-86F4-8ED5226427F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{9D0390B1-34BB-4D0E-B8EB-3509C8B0AB1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2D138E20-5858-4571-86F4-8ED5226427F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D138E20-5858-4571-86F4-8ED5226427F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D138E20-5858-4571-86F4-8ED5226427F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0390B1-34BB-4D0E-B8EB-3509C8B0AB1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0390B1-34BB-4D0E-B8EB-3509C8B0AB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0390B1-34BB-4D0E-B8EB-3509C8B0AB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0390B1-34BB-4D0E-B8EB-3509C8B0AB1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
