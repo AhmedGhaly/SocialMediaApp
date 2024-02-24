@@ -26,9 +26,15 @@ namespace Service_Layer.Service
 
         public IEnumerable<RequestUserDto> getAllUsers()
         {
-            var res = unitOfWork.Users.GetAll();   
-            return mapper.Map<List<RequestUserDto>>(res);
+            var users = unitOfWork.Users.GetAll();   
+            return mapper.Map<List<RequestUserDto>>(users);
 
+        }
+
+        public RequestUserDto getById(int id)
+        {
+            var user = unitOfWork.Users.GetById(id);
+            return mapper.Map<RequestUserDto>(user);
         }
     }
 }

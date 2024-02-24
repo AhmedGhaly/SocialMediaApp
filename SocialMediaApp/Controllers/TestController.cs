@@ -20,5 +20,16 @@ namespace SocialMediaApp.Controllers
             
             return Ok(serviceManager.UserService.getAllUsers());
         }
+
+
+        [HttpGet("GetById/{id}")]
+        public async Task<ActionResult> getById(int id)
+        {
+            if (id == 0)
+                throw new CustomException("this id not found ...");
+
+            return Ok(serviceManager.UserService.getById(id));
+        }
+
     }
 }
