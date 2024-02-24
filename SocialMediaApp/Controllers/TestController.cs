@@ -1,4 +1,5 @@
-﻿using Domain_Layer.Exceptions;
+﻿using Domain_Layer;
+using Domain_Layer.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SocialMediaApp.Controllers
@@ -6,10 +7,17 @@ namespace SocialMediaApp.Controllers
     [Route("api/[controller]")]
     public class TestController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult test()
+        private readonly IUnitOfWork unitOfWork;
+
+        public TestController(IUnitOfWork unitOfWork)
         {
-            throw new CustomException("this is a error");
+            this.unitOfWork = unitOfWork;
+        }
+        [HttpGet]
+        public async Task<ActionResult> test()
+        {
+            var r = await unitOfWork.Users.GetByIdAsync(1);
+            return Ok(r);
         }
     }
 }

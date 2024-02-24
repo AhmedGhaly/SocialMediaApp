@@ -1,4 +1,5 @@
 
+using Domain_Layer;
 using Domain_Layer.Exceptions;
 using Infrastructure_Layer;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ namespace SocialMediaApp
             options.UseSqlServer(
                      builder.Configuration.GetConnectionString("DB")));
 
+            builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
             builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
             builder.Services.AddProblemDetails();
 
