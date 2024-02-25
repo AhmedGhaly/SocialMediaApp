@@ -24,7 +24,7 @@ namespace Domain_Layer.Models
 
 
         [ForeignKey("User")]
-        public int userId { get; set; }
+        public string userId { get; set; }
         public virtual User User { get; set; }
 
         [ForeignKey("Post")]

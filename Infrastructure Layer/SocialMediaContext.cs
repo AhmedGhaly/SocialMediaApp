@@ -1,4 +1,5 @@
 ﻿using Domain_Layer.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure_Layer
 {
-    public class SocialMediaContext : DbContext
+    public class SocialMediaContext : IdentityDbContext<User>
     {
         public SocialMediaContext()
         {

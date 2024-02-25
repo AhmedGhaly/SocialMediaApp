@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain_Layer.Models
 {
-    public class User
+    public class User : IdentityUser
     {
 
         public User()
@@ -18,7 +19,7 @@ namespace Domain_Layer.Models
             subComments = new List<SubComment>();
         }
 
-        public int id { get; set; }
+        //public string id { get; set; }
         public string? image { get; set; }
         public string? coverImage { get; set; }
 
