@@ -17,8 +17,9 @@ namespace SocialMediaApp.Controllers
         [HttpGet]
         public async Task<ActionResult> test()
         {
+            throw new NotImplementedException();
             
-            return Ok(serviceManager.UserService.getAllUsers());
+            //return Ok(serviceManager.UserService.getAllUsers());
         }
 
 
