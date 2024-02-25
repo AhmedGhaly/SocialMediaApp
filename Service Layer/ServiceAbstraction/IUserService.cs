@@ -10,6 +10,6 @@ namespace Service_Layer.ServiceAbstraction
     public interface IUserService
     {
         IEnumerable<RequestUserDto> getAllUsers();
-        RequestUserDto getById(int id);
+        RequestUserDto getById(string id);
     }
 }

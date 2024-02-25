@@ -10,7 +10,7 @@ namespace Domain_Layer
 {
     public interface IUnitOfWork :IDisposable
     {
-        IBaseRepository<User> Users { get; }    
+        IUserRepository Users { get; }   
         int complete();
     }
 }

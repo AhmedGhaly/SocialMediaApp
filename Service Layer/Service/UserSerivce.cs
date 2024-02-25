@@ -31,9 +31,9 @@ namespace Service_Layer.Service
 
         }
 
-        public RequestUserDto getById(int id)
+        public RequestUserDto getById(string id)
         {
-            var user = unitOfWork.Users.GetById(id);
+            var user = unitOfWork.Users.getById(id);
             return mapper.Map<RequestUserDto>(user);
         }
     }

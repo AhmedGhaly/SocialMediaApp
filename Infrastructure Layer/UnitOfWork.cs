@@ -11,16 +11,19 @@ using System.Threading.Tasks;
 namespace Infrastructure_Layer
 {
     public class UnitOfWork : IUnitOfWork
+
     {
         private readonly SocialMediaContext _context;
 
         public UnitOfWork(SocialMediaContext context)
         {
-            Users = new BaseRepository<User>(context);
+            Users = new UserRepository(context);
             _context = context;
         }
 
-        public IBaseRepository<User> Users { get; private set; }
+        //public IBaseRepository<User> Users { get; private set; }
+
+        public IUserRepository Users { get; private set; }
 
         public int complete()
         {

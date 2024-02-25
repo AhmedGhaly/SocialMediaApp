@@ -24,9 +24,9 @@ namespace SocialMediaApp.Controllers
 
 
         [HttpGet("GetById/{id}")]
-        public async Task<ActionResult> getById(int id)
+        public async Task<ActionResult> getById(string id)
         {
-            if (id == 0)
+            if (id is null)
                 throw new CustomException("this id not found ...");
 
             return Ok(serviceManager.UserService.getById(id));
